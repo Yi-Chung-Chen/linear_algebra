@@ -4,11 +4,33 @@ Created on Thu Mar 24 13:29:27 2022
 
 @author: timmy
 """
+#龍哥的這個考試可以用複製貼上，就用力用下去
 
+arr=input().split()
+#處理龍哥的驚喜
+if(len(arr)==3):
+    arr.append(0)
+if(len(arr)==5):
+    for _ in range(4):
+        arr.append(0)
+if(len(arr)==6):
+    for _ in range(3):
+        arr.append(0)
+if(len(arr)==7):
+    for _ in range(2):
+        arr.append(0)
+if(len(arr)==8):
+    arr.append(0)
+if(len(arr)==13):
+    for _ in range(3):
+        arr.append(0)
+if(len(arr)==14):
+    for _ in range(2):
+        arr.append(0)
+if(len(arr)==15):
+    arr.append(0)
 
-arr=list(input("輸入行列式值:").split())
-arr = list(map(int,arr))
-
+#開算
 if(len(arr)==4):
     det = arr[0]*arr[3]-arr[1]*arr[2]
 elif(len(arr)==9):
