@@ -18,17 +18,19 @@ def modification(matrix):
     if len(matrix)<4:
         for i in range(4-len(matrix)):
             matrix.append(0)
-    elif len(matrix)<9&len(matrix)!=4:
+            break
+    elif len(matrix)<9:
         for j in range(9-(len(matrix))):
             matrix.append(0)
-            
-    elif len(matrix)<16&len(matrix)!=4&len(matrix)!=9:
+            break
+    elif len(matrix)<16:
         for k in range(16-(len(matrix))):
             matrix.append(0)
-            
-    elif len(matrix)<25&len(matrix)!=4&len(matrix)!=9&len(matrix)!=16:
+            break
+    elif len(matrix)<25:
         for l in range(25-(len(matrix))):
             matrix.append(0)
+            break
     return matrix
 
 matirx = modification(matrix)
@@ -37,8 +39,6 @@ if len(matrix)==4:
     a=[]
     b=[]
     c=[]
-
-
     for i in range(2):
         a.append(int(matrix[i]))
     for j in range(2,4):
