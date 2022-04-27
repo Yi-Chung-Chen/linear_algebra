@@ -1,0 +1,30 @@
+def getMatrixMinor(m,i,j):
+    return [row[:j] + row[j+1:] for row in (m[:i]+m[i+1:])]
+
+def getMatrixDeternminant(m):
+    #base case for 2x2 matrix
+    if len(m) == 2:
+        return m[0][0]*m[1][1]-m[0][1]*m[1][0]
+
+    determinant = 0
+    for c in range(len(m)):
+        determinant += ((-1)**c)*m[0][c]*getMatrixDeternminant(getMatrixMinor(m,0,c))
+    return determinant
+
+
+matrix=input().split()
+a=[]
+b=[]
+c=[]
+for i in range(2):
+    a.append(int(matrix[i])
+for j in range(3,5)
+    b.append(int(matrix[j])
+
+c.append(a)
+c.append(b)
+print(getMatrixDeternminant(c))
+
+
+#上面用的function 來自https://stackoverflow.com/questions/3819500/code-to-solve-determinant-using-python-without-using-scipy-linalg-det
+#下方的coding神人 
